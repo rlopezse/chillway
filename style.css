@@ -1,0 +1,122 @@
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+}
+
+#workspaces button {
+  color: #ffffff;
+}
+
+#workspaces button:hover {
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.focused {
+  /*background-color: #64727d;*/
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+}
+
+#mode {
+  background-color: #64727d;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd {
+  margin: 6px 3px;
+}
+
+#window,
+#workspaces {
+  margin: 0 5px;
+  padding: 5px 0;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+#clock,
+#pulseaudio,
+#network {
+    color: white;
+    padding: 0 3px;
+}
+
+#clock {
+  margin-right: 10px;
+}
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+
+#network.disconnected {
+  background-color: #f53c3c;
+}
+
+#tray {
+  background-color: #2980b9;
+}
+
+#idle_inhibitor {
+  background-color: #2d3436;
+}
+
+#idle_inhibitor.activated {
+  background-color: #ecf0f1;
+  color: #2d3436;
+}
+
+#mpd {
+  background-color: #66cc99;
+  color: #2a5c45;
+}
+
+#mpd.disconnected {
+  background-color: #f53c3c;
+}
+
+#mpd.stopped {
+  background-color: #90b1b1;
+}
+
+#mpd.paused {
+  background-color: #51a37a;
+}
